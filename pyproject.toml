@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "xl2csv"
 version = "0.1.0"
-description = ""
+description = "A tool to convert an Excel file consisting of multiple worksheets to individual CSV files."
 authors = ["netletic <netletic@gmail.com>"]
 
 [tool.poetry.dependencies]
