@@ -55,7 +55,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 def main(argv: Optional[Sequence[str]] = None) -> int:
     args = parse_args(argv)
     excel_file = args.src
-    output_dir = Path(OUT / slugify(excel_file.name.partition(".")[0]))
+    output_dir = Path(args.dst / slugify(excel_file.name.partition(".")[0]))
     sheets = get_sheets(excel_file)
     sheets_to_csv(output_dir, sheets)
     return 0
