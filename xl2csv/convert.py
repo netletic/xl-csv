@@ -1,8 +1,8 @@
 import argparse
-from collections import namedtuple
 import csv
-from pathlib import Path
 import os
+from collections import namedtuple
+from pathlib import Path
 from typing import Optional
 from typing import Sequence
 
@@ -58,6 +58,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     output_dir = Path(OUT / slugify(excel_file.name.partition(".")[0]))
     sheets = get_sheets(excel_file)
     sheets_to_csv(output_dir, sheets)
+    return 0
 
 
 if __name__ == "__main__":
